@@ -7,10 +7,10 @@ services:
      ports:
        - 8081:80
      volumes:
-       - /var/www/html/modules
-       - /var/www/html/profiles
-       - /var/www/html/themes
-       - /var/www/html/sites
+       - C:\Users\Pablo\Desktop\drupal:/var/www/html/modules
+       - C:\Users\Pablo\Desktop\drupal:/var/www/html/profiles
+       - C:\Users\Pablo\Desktop\drupal:/var/www/html/themes
+       - C:\Users\Pablo\Desktop\drupal:/var/www/html/sites 
      restart: always
 
    drupaldb:
@@ -22,5 +22,5 @@ services:
       MYSQL_DATABASE: drupaldb
       MYSQL_ROOT_PASSWORD: admin
      volumes:
-       - C:\Users\..\Desktop\mysql-data:/var/lib/mysql
+       - C:\Users\Pablo\Desktop\mysql-data:/var/lib/mysql
      restart: always
