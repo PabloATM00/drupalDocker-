@@ -15,7 +15,6 @@ services:
 
    drupaldb:
      image: mysql:latest
-     command: --default-authentication-plugin=mysql_native_passsword
      ports:
        - 3306:3306
      environment:
