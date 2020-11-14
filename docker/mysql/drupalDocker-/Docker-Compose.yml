@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  drupal:
+    image: drupal:latest
+    environment:
+      - DRUPAL_DB_PASSWORD=admin
+    ports:
+      - 8081:80
+    volumes:
+      - /var/www/html/modules
+      - /var/www/html/profiles
+      - /var/www/html/themes
+      - /var/www/html/sites
+    links:
+      - mysql:mysql
+  mysql:
+    image: mysql:latest
+    environment:
+     - MYSQL_DATABASE=drupaldb
+     - MYSQL_ROOT_PASSWORD=admin
+    ports:
+      - "3306:3306"
+    volumes:
+     - C:\docker\mysql:/var/lib/mysql
+    
